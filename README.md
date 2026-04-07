@@ -2,6 +2,10 @@
 
 This repo runs a GitHub Actions workflow every day and calculates the live total price of your selected Megekko parts.
 
+## Price history
+
+![Price chart](output/price_chart.png)
+
 ## What it does
 
 - fetches each product page from Megekko
@@ -10,6 +14,8 @@ This repo runs a GitHub Actions workflow every day and calculates the live total
 - writes:
   - `output/price_report.json`
   - `output/price_report.md`
+  - `output/price_history.json`
+  - `output/price_chart.png`
 - uploads the report as a workflow artifact
 - commits updated output files back to the repo
 

@@ -7,6 +7,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+import matplotlib.dates as mdates
+import matplotlib.pyplot as plt
+import matplotlib.ticker as mticker
 import requests
 from bs4 import BeautifulSoup
 
@@ -15,6 +18,8 @@ PRODUCTS_FILE = BASE_DIR / "products.json"
 OUTPUT_DIR = BASE_DIR / "output"
 JSON_OUT = OUTPUT_DIR / "price_report.json"
 MD_OUT = OUTPUT_DIR / "price_report.md"
+HISTORY_OUT = OUTPUT_DIR / "price_history.json"
+CHART_OUT = OUTPUT_DIR / "price_chart.png"
 
 HEADERS = {
     "User-Agent": (
@@ -47,8 +52,24 @@ def load_products() -> list[dict[str, str]]:
 
 
 def normalize_price(value: str) -> float | None:
-    cleaned = value.replace("€", "").replace("\xa0", " ").strip()
-    cleaned = cleaned.replace(".", "").replace(",", ".")
+    cleaned = value.replace("€", "").replace("\xa0", "").strip()
+    cleaned = re.sub(r"\s+", "", cleaned)
+
+    # Dutch thousands+decimal: 1.234,56  →  1234.56
+    if re.search(r"\d\.\d{3},\d{1,2}", cleaned):
+        cleaned = cleaned.replace(".", "").replace(",", ".")
+    # English thousands+decimal: 1,234.56  →  1234.56
+    elif re.search(r"\d,\d{3}\.\d{1,2}", cleaned):
+        cleaned = cleaned.replace(",", "")
+    # Dot is decimal (e.g. JSON-LD "111.95"):  ends with .<1-2 digits>
+    elif re.search(r"\.\d{1,2}$", cleaned):
+        cleaned = cleaned.replace(",", "")
+    # Comma is decimal (e.g. "111,95"):  ends with ,<1-2 digits>
+    elif re.search(r",\d{1,2}$", cleaned):
+        cleaned = cleaned.replace(".", "").replace(",", ".")
+    else:
+        cleaned = re.sub(r"[,.]", "", cleaned)
+
     cleaned = re.sub(r"[^0-9.]", "", cleaned)
     if not cleaned:
         return None
@@ -214,6 +235,74 @@ def build_markdown(results: list[ProductResult], total: float, timestamp: str) -
     return "\n".join(lines)
 
 
+def update_price_history(date_str: str, total: float) -> list[dict]:
+    history: list[dict] = []
+    if HISTORY_OUT.exists():
+        history = json.loads(HISTORY_OUT.read_text(encoding="utf-8"))
+    # Replace entry for today if it already exists, otherwise append.
+    today = date_str[:10]
+    history = [e for e in history if e["date"] != today]
+    history.append({"date": today, "total_eur": round(total, 2)})
+    history.sort(key=lambda e: e["date"])
+    HISTORY_OUT.write_text(json.dumps(history, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return history
+
+
+def generate_chart(history: list[dict]) -> None:
+    dates = [datetime.strptime(e["date"], "%Y-%m-%d") for e in history]
+    totals = [e["total_eur"] for e in history]
+
+    # ── Style ────────────────────────────────────────────────────────────────
+    BG = "#0d1117"        # GitHub dark background
+    PANEL = "#161b22"     # slightly lighter panel
+    ACCENT = "#58a6ff"    # GitHub blue
+    GRID = "#30363d"
+    TEXT = "#c9d1d9"
+    SUBTEXT = "#8b949e"
+
+    fig, ax = plt.subplots(figsize=(10, 4), dpi=150)
+    fig.patch.set_facecolor(BG)
+    ax.set_facecolor(PANEL)
+
+    # Fill under the line
+    ax.fill_between(dates, totals, alpha=0.18, color=ACCENT)
+
+    # Main line + dots
+    ax.plot(dates, totals, color=ACCENT, linewidth=2.2, zorder=3)
+    ax.scatter(dates, totals, color=ACCENT, s=40, zorder=4)
+
+    # Annotate last point
+    if dates:
+        ax.annotate(
+            f"€ {totals[-1]:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."),
+            xy=(dates[-1], totals[-1]),
+            xytext=(8, 6),
+            textcoords="offset points",
+            fontsize=9,
+            color=TEXT,
+            fontweight="bold",
+        )
+
+    # Axes formatting
+    ax.xaxis.set_major_formatter(mdates.DateFormatter("%d %b"))
+    ax.xaxis.set_major_locator(mdates.AutoDateLocator(minticks=4, maxticks=10))
+    ax.yaxis.set_major_formatter(mticker.FuncFormatter(
+        lambda v, _: f"€ {v:,.0f}".replace(",", ".")
+    ))
+    ax.tick_params(colors=SUBTEXT, labelsize=8)
+    for spine in ax.spines.values():
+        spine.set_edgecolor(GRID)
+
+    ax.grid(axis="y", color=GRID, linewidth=0.8, linestyle="--")
+    ax.grid(axis="x", color=GRID, linewidth=0.5, linestyle=":")
+    ax.set_title("Total build price over time", color=TEXT, fontsize=12, pad=12)
+    fig.autofmt_xdate(rotation=30, ha="right")
+
+    plt.tight_layout()
+    fig.savefig(CHART_OUT, dpi=150, bbox_inches="tight", facecolor=BG)
+    plt.close(fig)
+
+
 def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     products = load_products()
@@ -234,8 +323,13 @@ def main() -> None:
     JSON_OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     MD_OUT.write_text(build_markdown(results, total, timestamp), encoding="utf-8")
 
+    history = update_price_history(timestamp, total)
+    generate_chart(history)
+
     print(f"Wrote {JSON_OUT}")
     print(f"Wrote {MD_OUT}")
+    print(f"Wrote {HISTORY_OUT}")
+    print(f"Wrote {CHART_OUT}")
     print(f"Total: {format_eur(total)}")
 
 
