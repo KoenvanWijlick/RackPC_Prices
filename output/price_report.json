@@ -1,0 +1,55 @@
+{
+  "generated_at": "2026-04-07T09:18:29+00:00",
+  "currency": "EUR",
+  "total_eur": 68214.0,
+  "products": [
+    {
+      "name": "Inter-Tech 2U-K-240L Rack Zwart",
+      "url": "https://www.megekko.nl/product/2008/1091888/19-Rackmount-Behuizingen/Inter-Tech-2U-K-240L-Rack-Zwart",
+      "price_eur": 11195.0,
+      "price_text": "€ 11.195,00",
+      "available": true,
+      "note": null
+    },
+    {
+      "name": "Crucial DDR4 1x16GB 3200 CT16G4DFRA32A Geheugenmodule",
+      "url": "https://www.megekko.nl/product/2046/1112969/DDR4-Geheugen/Crucial-DDR4-1x16GB-3200-CT16G4DFRA32A-Geheugenmodule",
+      "price_eur": 12490.0,
+      "price_text": "€ 12.490,00",
+      "available": true,
+      "note": null
+    },
+    {
+      "name": "Kingston NV3 1TB M.2 SSD",
+      "url": "https://www.megekko.nl/product/5093/310994/SSD-M-2/Kingston-NV3-1TB-M-2-SSD",
+      "price_eur": 14249.0,
+      "price_text": "€ 14.249,00",
+      "available": true,
+      "note": null
+    },
+    {
+      "name": "ASRock B550M Pro4 moederbord",
+      "url": "https://www.megekko.nl/product/4286/287614/AMD-Socket-AM4-Moederborden/ASRock-B550M-Pro4-moederbord",
+      "price_eur": 9690.0,
+      "price_text": "€ 9.690,00",
+      "available": true,
+      "note": null
+    },
+    {
+      "name": "AMD Ryzen 5 5600G processor",
+      "url": "https://www.megekko.nl/product/4278/294850/Socket-AM4-Processoren/AMD-Ryzen-5-5600G-processor",
+      "price_eur": 15900.0,
+      "price_text": "€ 15.900,00",
+      "available": true,
+      "note": null
+    },
+    {
+      "name": "Noctua NH-L9a-AM4",
+      "url": "https://www.megekko.nl/product/1994/377319/CPU-Luchtkoeling/Noctua-NH-L9a-AM4",
+      "price_eur": 4690.0,
+      "price_text": "€ 4.690,00",
+      "available": true,
+      "note": null
+    }
+  ]
+}
