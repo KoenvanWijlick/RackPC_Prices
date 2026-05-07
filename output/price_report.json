@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-05T07:50:11+00:00",
+  "generated_at": "2026-05-07T08:08:43+00:00",
   "currency": "EUR",
-  "total_eur": 651.75,
+  "total_eur": 651.65,
   "products": [
     {
       "name": "Inter-Tech 2U-K-240L Rack Zwart",
@@ -22,8 +22,8 @@
     {
       "name": "Kingston NV3 1TB M.2 SSD",
       "url": "https://www.megekko.nl/product/5093/310994/SSD-M-2/Kingston-NV3-1TB-M-2-SSD",
-      "price_eur": 149.0,
-      "price_text": "€ 149,00",
+      "price_eur": 148.9,
+      "price_text": "€ 148,90",
       "available": true,
       "note": null
     },
