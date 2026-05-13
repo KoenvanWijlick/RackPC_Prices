@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-12T08:16:55+00:00",
+  "generated_at": "2026-05-13T08:28:17+00:00",
   "currency": "EUR",
-  "total_eur": 698.55,
+  "total_eur": 686.55,
   "products": [
     {
       "name": "Inter-Tech 2U-K-240L Rack Zwart",
@@ -30,8 +30,8 @@
     {
       "name": "ASRock B550M Pro4 moederbord",
       "url": "https://www.megekko.nl/product/4286/287614/AMD-Socket-AM4-Moederborden/ASRock-B550M-Pro4-moederbord",
-      "price_eur": 96.9,
-      "price_text": "€ 96,90",
+      "price_eur": 84.9,
+      "price_text": "€ 84,90",
       "available": true,
       "note": null
     },
