@@ -1,6 +1,6 @@
 # Daily Megekko price report
 
-Generated: `2026-05-27T08:54:42+00:00`
+Generated: `2026-05-28T09:38:54+00:00`
 
 | Product | Status | Price |
 |---|---:|---:|
@@ -9,6 +9,10 @@ Generated: `2026-05-27T08:54:42+00:00`
 | [Kingston NV3 1TB M.2 SSD](https://www.megekko.nl/product/5093/310994/SSD-M-2/Kingston-NV3-1TB-M-2-SSD) | available | € 148,90 |
 | [ASRock B550M Pro4 moederbord](https://www.megekko.nl/product/4286/287614/AMD-Socket-AM4-Moederborden/ASRock-B550M-Pro4-moederbord) | available | € 84,90 |
 | [AMD Ryzen 5 5600G processor](https://www.megekko.nl/product/4278/294850/Socket-AM4-Processoren/AMD-Ryzen-5-5600G-processor) | available | € 159,00 |
-| [Noctua NH-L9a-AM4](https://www.megekko.nl/product/1994/377319/CPU-Luchtkoeling/Noctua-NH-L9a-AM4) | available | € 46,90 |
+| [Noctua NH-L9a-AM4](https://www.megekko.nl/product/1994/377319/CPU-Luchtkoeling/Noctua-NH-L9a-AM4) | unavailable | - |
 
-**Total:** € 686,55
+**Total:** € 639,65
+
+## Notes
+
+- Noctua NH-L9a-AM4: Product appears unavailable
