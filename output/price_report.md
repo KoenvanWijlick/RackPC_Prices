@@ -1,6 +1,6 @@
 # Daily Megekko price report
 
-Generated: `2026-05-31T08:31:01+00:00`
+Generated: `2026-06-01T11:01:30+00:00`
 
 | Product | Status | Price |
 |---|---:|---:|
