@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-06T09:47:45+00:00",
+  "generated_at": "2026-07-07T08:59:44+00:00",
   "currency": "EUR",
-  "total_eur": 650.65,
+  "total_eur": 491.65,
   "products": [
     {
       "name": "Inter-Tech 2U-K-240L Rack Zwart",
@@ -38,10 +38,10 @@
     {
       "name": "AMD Ryzen 5 5600G processor",
       "url": "https://www.megekko.nl/product/4278/294850/Socket-AM4-Processoren/AMD-Ryzen-5-5600G-processor",
-      "price_eur": 159.0,
-      "price_text": "€ 159,00",
-      "available": true,
-      "note": null
+      "price_eur": null,
+      "price_text": null,
+      "available": false,
+      "note": "Product appears unavailable"
     },
     {
       "name": "Noctua NH-L9a-AM4",
