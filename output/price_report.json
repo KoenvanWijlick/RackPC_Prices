@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-10T08:53:55+00:00",
+  "generated_at": "2026-07-11T07:27:56+00:00",
   "currency": "EUR",
-  "total_eur": 491.65,
+  "total_eur": 515.75,
   "products": [
     {
       "name": "Inter-Tech 2U-K-240L Rack Zwart",
@@ -14,10 +14,10 @@
     {
       "name": "Crucial DDR4 1x16GB 3200 CT16G4DFRA32A Geheugenmodule",
       "url": "https://www.megekko.nl/product/2046/1112969/DDR4-Geheugen/Crucial-DDR4-1x16GB-3200-CT16G4DFRA32A-Geheugenmodule",
-      "price_eur": 134.9,
-      "price_text": "€ 134,90",
-      "available": true,
-      "note": null
+      "price_eur": null,
+      "price_text": null,
+      "available": false,
+      "note": "Product appears unavailable"
     },
     {
       "name": "Kingston NV3 1TB M.2 SSD",
@@ -38,10 +38,10 @@
     {
       "name": "AMD Ryzen 5 5600G processor",
       "url": "https://www.megekko.nl/product/4278/294850/Socket-AM4-Processoren/AMD-Ryzen-5-5600G-processor",
-      "price_eur": null,
-      "price_text": null,
-      "available": false,
-      "note": "Product appears unavailable"
+      "price_eur": 159.0,
+      "price_text": "€ 159,00",
+      "available": true,
+      "note": null
     },
     {
       "name": "Noctua NH-L9a-AM4",
