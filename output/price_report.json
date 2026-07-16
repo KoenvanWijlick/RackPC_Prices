@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-15T07:44:36+00:00",
+  "generated_at": "2026-07-16T07:50:02+00:00",
   "currency": "EUR",
-  "total_eur": 356.75,
+  "total_eur": 506.65,
   "products": [
     {
       "name": "Inter-Tech 2U-K-240L Rack Zwart",
@@ -14,10 +14,10 @@
     {
       "name": "Crucial DDR4 1x16GB 3200 CT16G4DFRA32A Geheugenmodule",
       "url": "https://www.megekko.nl/product/2046/1112969/DDR4-Geheugen/Crucial-DDR4-1x16GB-3200-CT16G4DFRA32A-Geheugenmodule",
-      "price_eur": null,
-      "price_text": null,
-      "available": false,
-      "note": "Product appears unavailable"
+      "price_eur": 149.9,
+      "price_text": "€ 149,90",
+      "available": true,
+      "note": null
     },
     {
       "name": "Kingston NV3 1TB M.2 SSD",
