@@ -1,6 +1,6 @@
 # Daily Megekko price report
 
-Generated: `2026-09-02T10:00:12+00:00`
+Generated: `2026-09-03T10:11:12+00:00`
 
 | Product | Status | Price |
 |---|---:|---:|
@@ -8,10 +8,10 @@ Generated: `2026-09-02T10:00:12+00:00`
 | [Crucial DDR4 1x16GB 3200 CT16G4DFRA32A Geheugenmodule](https://www.megekko.nl/product/2046/1112969/DDR4-Geheugen/Crucial-DDR4-1x16GB-3200-CT16G4DFRA32A-Geheugenmodule) | available | € 169,90 |
 | [Kingston NV3 1TB M.2 SSD](https://www.megekko.nl/product/5093/310994/SSD-M-2/Kingston-NV3-1TB-M-2-SSD) | available | € 154,90 |
 | [ASRock B550M Pro4 moederbord](https://www.megekko.nl/product/4286/287614/AMD-Socket-AM4-Moederborden/ASRock-B550M-Pro4-moederbord) | available | € 94,90 |
-| [AMD Ryzen 5 5600G processor](https://www.megekko.nl/product/4278/294850/Socket-AM4-Processoren/AMD-Ryzen-5-5600G-processor) | available | € 169,00 |
+| [AMD Ryzen 5 5600G processor](https://www.megekko.nl/product/4278/294850/Socket-AM4-Processoren/AMD-Ryzen-5-5600G-processor) | available | € 175,00 |
 | [Noctua NH-L9a-AM4](https://www.megekko.nl/product/1994/377319/CPU-Luchtkoeling/Noctua-NH-L9a-AM4) | unavailable | - |
 
-**Total:** € 700,65
+**Total:** € 706,65
 
 ## Notes
 
