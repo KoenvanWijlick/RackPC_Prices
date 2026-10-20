@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-19T11:20:45+00:00",
+  "generated_at": "2026-10-20T10:28:50+00:00",
   "currency": "EUR",
-  "total_eur": 556.75,
+  "total_eur": 570.75,
   "products": [
     {
       "name": "Inter-Tech 2U-K-240L Rack Zwart",
@@ -38,8 +38,8 @@
     {
       "name": "AMD Ryzen 5 5600G processor",
       "url": "https://www.megekko.nl/product/4278/294850/Socket-AM4-Processoren/AMD-Ryzen-5-5600G-processor",
-      "price_eur": 195.0,
-      "price_text": "€ 195,00",
+      "price_eur": 209.0,
+      "price_text": "€ 209,00",
       "available": true,
       "note": null
     },
