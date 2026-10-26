@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-25T10:13:39+00:00",
+  "generated_at": "2026-10-26T11:37:23+00:00",
   "currency": "EUR",
-  "total_eur": 570.75,
+  "total_eur": 785.65,
   "products": [
     {
       "name": "Inter-Tech 2U-K-240L Rack Zwart",
@@ -14,10 +14,10 @@
     {
       "name": "Crucial DDR4 1x16GB 3200 CT16G4DFRA32A Geheugenmodule",
       "url": "https://www.megekko.nl/product/2046/1112969/DDR4-Geheugen/Crucial-DDR4-1x16GB-3200-CT16G4DFRA32A-Geheugenmodule",
-      "price_eur": null,
-      "price_text": null,
-      "available": false,
-      "note": "Product appears unavailable"
+      "price_eur": 209.9,
+      "price_text": "€ 209,90",
+      "available": true,
+      "note": null
     },
     {
       "name": "Kingston NV3 1TB M.2 SSD",
@@ -30,8 +30,8 @@
     {
       "name": "ASRock B550M Pro4 moederbord",
       "url": "https://www.megekko.nl/product/4286/287614/AMD-Socket-AM4-Moederborden/ASRock-B550M-Pro4-moederbord",
-      "price_eur": 94.9,
-      "price_text": "€ 94,90",
+      "price_eur": 99.9,
+      "price_text": "€ 99,90",
       "available": true,
       "note": null
     },
