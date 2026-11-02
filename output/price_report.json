@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-01T12:06:05+00:00",
+  "generated_at": "2026-11-02T13:55:55+00:00",
   "currency": "EUR",
-  "total_eur": 576.65,
+  "total_eur": 586.65,
   "products": [
     {
       "name": "Inter-Tech 2U-K-240L Rack Zwart",
@@ -14,8 +14,8 @@
     {
       "name": "Crucial DDR4 1x16GB 3200 CT16G4DFRA32A Geheugenmodule",
       "url": "https://www.megekko.nl/product/2046/1112969/DDR4-Geheugen/Crucial-DDR4-1x16GB-3200-CT16G4DFRA32A-Geheugenmodule",
-      "price_eur": 209.9,
-      "price_text": "€ 209,90",
+      "price_eur": 219.9,
+      "price_text": "€ 219,90",
       "available": true,
       "note": null
     },
